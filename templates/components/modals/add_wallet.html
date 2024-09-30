@@ -1,0 +1,39 @@
+<div class="modal fade" id="modalAddWallet" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Создание нового кошелька</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <form method="POST" action="/add_wallet">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label" for="inputName">Название</label>
+            <input name="name" type="text" class="form-control" id="inputName" placeholder="Cash" required>
+          </div>
+          <label class="form-label" for="inputBalance">Баланс</label>
+          <div class="input-group">
+            <input name="amount" type="number" class="form-control" id="inputBalance" style="flex: 1 1 50%;" required>
+            <select name="currency" class="form-control select2" style="flex: 1 1 50%;">
+              <option value="try">TRY - турецкая лира</option>
+              <option value="usd">USD - доллар</option>
+              <option value="rub">RUB - рубль</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Добавить кошелёк</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.select2').select2({
+        dropdownParent: $('#modalAddWallet .modal-body')
+    });
+});
+
+</script>

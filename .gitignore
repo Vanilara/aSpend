@@ -1,0 +1,12 @@
+myprojectenv/
+flask_session/
+__pycache__/
+*.txt
+!requirements.txt
+*.log
+*.session
+*.pyc
+*.sock
+*.db
+*.env
+*.DS_Store

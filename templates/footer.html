@@ -1,0 +1,20 @@
+{% if alerts.error %}
+    <script>
+        toastr.error('{{alerts.error}}',{
+                timeOut: 3000,
+                closeButton: true,
+                progressBar: true
+            });
+    </script>
+{% elif alerts.success %}
+    <script>
+    toastr.success('{{alerts.success}}', {
+            timeOut: 3000,
+            closeButton: true,
+            progressBar: true
+        });
+    </script>
+{% endif %}
+
+</body>
+</html>

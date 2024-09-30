@@ -1,0 +1,34 @@
+<div class="col-6">
+    <div class="row">
+        <div class="col-6">
+            {% for currency, currency_info in currencies|items %}
+                <div class="border p-2 mb-2" onclick="showWallets('{{currency}}')">
+                    {{ currency }}: {{currency_info.total_amount}}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-6">
+            <div id="wallet-info" style="font-size: 14px;">
+                {% for wallet in wallets %}
+                    <div class="wallet-el border p-2 mb-2" data-currency="{{wallet.currency}}">
+                        {{wallet.name}}: {{wallet.amount}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showWallets(currency) {
+        const wallets = document.getElementsByClassName('wallet-el');
+        Array.from(wallets).forEach(wallet => {
+            if (wallet.getAttribute('data-currency') == currency){
+                wallet.style.display = 'block'
+            } else {
+                wallet.style.display = 'none'
+            }
+        });
+    }
+    showWallets('usd')
+</script>

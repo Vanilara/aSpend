@@ -1,0 +1,26 @@
+/* Скрыть стрелки */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.select2-container .select2-selection--single {
+    height: 100%; /* Уже установлено вами, убедитесь, что высота соответствует вашему дизайну */
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    height: 100%; /* Устанавливаем высоту в 100% для внутреннего контейнера */
+    line-height: normal; /* Убираем фиксированную высоту строки, если она была установлена */
+    display: flex; /* Используем flexbox для выравнивания содержимого */
+    align-items: center; /* Центрируем содержимое по вертикали */
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+    height: 100%; /* Убедитесь, что стрелка также занимает всю высоту */
+    align-self: center; /* Центрируем стрелку по вертикали */
+}
