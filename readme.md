@@ -17,8 +17,8 @@ This project is a work in progress, aiming to create a financial tracking interf
 To clone the repository and install dependencies, run the following commands:
 
 ```bash
-git clone https://github.com/Vanilara/Sadok.git
-cd aSpend
+git clone https://github.com/Vanilara/aSpend-InDevelopment.git
+cd aSpend-InDevelopment
 pip install -r requirements.txt
 python3 database/remake_database.py
 python3 -m flask run --debug --port=5001
