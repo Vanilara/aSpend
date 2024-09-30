@@ -9,7 +9,6 @@ This project is a work in progress, aiming to create a financial tracking interf
 ## Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
 - [Technologies](#technologies)
 
@@ -19,15 +18,11 @@ To clone the repository and install dependencies, run the following commands:
 
 ```bash
 git clone https://github.com/Vanilara/Sadok.git
-cd sadok
+cd aSpend
 pip install -r requirements.txt
-python3 remake_database.py
+python3 database/remake_database.py
 python3 -m flask run --debug --port=5001
 ```
-
-
-## Usage
-Before registration, users will see a demo layout of the interface. After logging in, they will access a dashboard where they can purchase collected data using their balance. User information can be found at /admin.
 
 ## Configuration
 
@@ -36,7 +31,7 @@ Before running the project, you need to set up the `.env` file. Example configur
 # .env
 ```
 DEBUG_MODE=True/False
-SERVER_URL=For debug mode when DEBUG_MODE=False (https://example.com)
+SERVER_URL=When DEBUG_MODE=False (https://example.com)
 ```
 
 ## Technologies
